@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 25rem;
+  min-height: 9.5rem;
+}
+
+input {
+  width: calc(100% - 1rem);
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border-color: green;
+}
+
+button {
+  margin: 0.25rem 0.25rem 0rem 0.5rem;
+  padding: 0.6rem;
+  width: 7rem;
+  background-color: green;
+  border: 1px solid green;
+  font-weight: bold;
+  color: white;
+}
+
+#deleteLead {
+  margin-left: 0.25rem;
+  background-color: white;
+  color: green;
+}
+
+ul {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 0.15rem;
+}
+
+li a {
+  color: green;
+  font-size: 1rem;
+}
