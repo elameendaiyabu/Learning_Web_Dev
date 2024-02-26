@@ -12,29 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.card {
-  width: 200px;
-  background-color: burlywood;
-  display: inline-block;
-  text-align: center;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px;
-}
-
-h2 {
-  margin-bottom: 0;
-  padding: 0;
-}
-
-h2,
 p {
-  color: black;
-}
-
-.img {
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
-  border-radius: 50%;
+  color: aliceblue;
 }
