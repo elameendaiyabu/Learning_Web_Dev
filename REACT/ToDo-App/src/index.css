@@ -12,3 +12,101 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 64px;
+}
+
+.container .input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container .input-container input {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.container .input-container button {
+  font-size: 32px;
+  width: 100px;
+  border-radius: 8px;
+  border: none;
+  background-color: hsl(160, 100%, 65%);
+
+  color: #242424;
+}
+
+.container .input-container button:hover {
+  background-color: hsl(160, 100%, 85%);
+  cursor: pointer;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.container ul li {
+  color: #242424;
+  background-color: wheat;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container ul li .text {
+  font-size: 18px;
+  margin-right: 150px;
+  margin-top: 5px;
+}
+
+.container ul li button {
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 2.5px;
+  border-radius: 5px;
+  border: none;
+  width: 70px;
+}
+
+.delete {
+  background-color: hsl(0, 100%, 60%);
+}
+
+.delete:hover {
+  background-color: hsl(0, 100%, 80%);
+}
+
+.move-btn {
+  background-color: hsl(160, 100%, 65%);
+  color: #242424;
+}
+
+.move-btn:hover {
+  background-color: hsl(160, 100%, 85%);
+}
