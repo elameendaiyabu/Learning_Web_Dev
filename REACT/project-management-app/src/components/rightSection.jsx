@@ -22,8 +22,8 @@ export default function RightSection() {
         <div className=" flex flex-col gap-10 items-center w-screen content-center justify-center h-screen">
             {isAdd ? (<form className=" w-full pl-14 pr-36 font-mono" action="">
                 <div className=" text-right flex justify-end gap-2">
-                    <Button function={save} value="Cancel" />
-                    <Button function={cancel} value="Save" />
+                    <Button onClick={save} value="Cancel" />
+                    <Button onClick={cancel} value="Save" />
                 </div>
                 <br />
                 <label>TITLE <br /><input className=" mt-1 mb-2 w-full p-1 rounded-md pl-4 focus:outline focus:outline-0 focus:border-b-4 focus:border-slate-500 border-b-4 border-slate-500" type="text" /></label><br />
@@ -32,7 +32,7 @@ export default function RightSection() {
             </form>) : (<><h1 className=" uppercase font-mono text-3xl font-bold">No Project Selected</h1>
                 <p className=" font-mono text-gray-400">Select a project or get started with a new one</p>
 
-                <Button function={newProject} value="Create new project" /></>)}
+                <Button onClick={newProject} value="Create new project" /></>)}
         </div>
     )
 
