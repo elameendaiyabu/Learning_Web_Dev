@@ -1,11 +1,13 @@
-import Component from "./Component"
+import RightSection from "./components/rightSection"
+import SideBar from "./components/sidebar"
 
 function App() {
 
   return (
-    <>
-      <Component />
-    </>
+    <div className=" flex">
+      <SideBar />
+      <RightSection />
+    </div>
   )
 }
 
