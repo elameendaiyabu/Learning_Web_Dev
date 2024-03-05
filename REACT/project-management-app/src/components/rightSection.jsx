@@ -1,7 +1,7 @@
 import Button from "./Button"
 import { useState, useRef } from "react";
 
-export default function RightSection({ isAdded, setIsAdded, project, setProject, itemIndex, isSelected }) {
+export default function RightSection({ isAdded, setIsAdded, project, setProject, itemIndex, isSelected, setIsSelected }) {
     const [title, setTitle] = useState()
     const [isSaved, setIsSaved] = useState(false)
     const [description, setDescription] = useState()
@@ -43,6 +43,20 @@ export default function RightSection({ isAdded, setIsAdded, project, setProject,
 
     }
 
+    function removeTask(index) {
+        const updatedProject = [...project];
+        updatedProject[itemIndex].task.splice(index, 1);
+        setProject(updatedProject);
+        setIsAdded(false)
+    }
+
+    function removeProject(index) {
+        const updatedProject = [...project];
+        updatedProject.splice(index, 1);
+        setProject(updatedProject);
+        setIsSelected(false)
+    }
+
     function cancel() {
         setIsAdded(false)
     }
@@ -66,7 +80,7 @@ export default function RightSection({ isAdded, setIsAdded, project, setProject,
                         <div className=" w-full h-full pl-96 m-0 pt-10 pr-10 p-6 font-mono">
                             <div className="flex justify-between mb-5 ">
                                 <h1 className=" text-6xl ">{project[itemIndex].title}</h1>
-                                <Button value="Delete" />
+                                <Button onClick={() => removeProject(itemIndex)} value="Delete" />
                             </div>
                             <p className=" text-xl mb-5 text-gray-400"> Due Date: {project[itemIndex].dueDate} </p>
 
@@ -80,9 +94,10 @@ export default function RightSection({ isAdded, setIsAdded, project, setProject,
                             <ul className=" mt-4">
                                 {project[itemIndex].task.map((task, taskIndex) => (
                                     <li
-                                        className=" text-lg pb-2"
+                                        className=" text-lg pb-2 hover:bg-gray-700"
                                         key={taskIndex}>
                                         {task}
+                                        <button onClick={() => removeTask(taskIndex)} className=" hover:bg-slate-900 float-right p-1">Clear</button>
                                     </li>
                                 ))}
                             </ul>

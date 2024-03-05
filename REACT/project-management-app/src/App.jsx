@@ -11,7 +11,7 @@ function App() {
   return (
     <div className=" flex relative">
       <SideBar setIsAdded={setIsAdded} project={project} setItemIndex={setItemIndex} setIsSelected={setIsSelected} />
-      <RightSection isAdded={isAdded} setIsAdded={setIsAdded} project={project} setProject={setProject} itemIndex={itemIndex} isSelected={isSelected} />
+      <RightSection isAdded={isAdded} setIsAdded={setIsAdded} project={project} setProject={setProject} itemIndex={itemIndex} isSelected={isSelected} setIsSelected={setIsSelected} />
     </div>
   )
 }
