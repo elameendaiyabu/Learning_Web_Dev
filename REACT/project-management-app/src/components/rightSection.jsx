@@ -1,16 +1,12 @@
+/* eslint-disable react/prop-types */
 import Button from "./Button"
 import { useState, useRef } from "react";
 
 export default function RightSection({ isAdded, setIsAdded, project, setProject, itemIndex, isSelected, setIsSelected }) {
-    const [title, setTitle] = useState()
-    const [isSaved, setIsSaved] = useState(false)
-    const [description, setDescription] = useState()
-    const [dueDate, setDueDate] = useState()
     const [task, setTask] = useState()
     const titleRef = useRef()
     const descriptionRef = useRef()
     const dueDateRef = useRef()
-    const taskRef = useRef()
 
     function newProject() {
         setIsAdded(true)
@@ -19,9 +15,6 @@ export default function RightSection({ isAdded, setIsAdded, project, setProject,
 
     function save() {
         setIsAdded(false)
-        setTitle(titleRef.current.value)
-        setDescription(descriptionRef.current.value)
-        setDueDate(dueDateRef.current.value)
 
         const projectObject = {
             title: titleRef.current.value,
@@ -30,7 +23,6 @@ export default function RightSection({ isAdded, setIsAdded, project, setProject,
             task: []
         }
         setProject(p => [...p, projectObject])
-        setIsSaved(true)
     }
 
     function getTask(e) {
