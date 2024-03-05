@@ -3,7 +3,7 @@ import Button from "./Button"
 import { useState, useRef } from "react";
 
 export default function RightSection({ isAdded, setIsAdded, project, setProject, itemIndex, isSelected, setIsSelected }) {
-    const [task, setTask] = useState()
+    const [task, setTask] = useState("")
     const titleRef = useRef()
     const descriptionRef = useRef()
     const dueDateRef = useRef()
